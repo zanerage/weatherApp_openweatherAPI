@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Simple Weather</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity_forecast">Forecast</string>
+	<string name="about_text">Weather application that shows the weather information from multiple city,
+	    With different color for weather condition.</string>
+	    
+	<string name="data_source">\nData from :\nwww.openweathermap.org</string>
+
+	<!-- Replace with your more apps URL -->
+	<string name="more_app_url">http://portfolio.dream-space.web.id/</string>
+
+	<!-- Replace with your Admob Publisher Id. -->
+	<string name="publisher_id">pub-XXXXXXXXXXXXXXX</string>
+
+	<!-- Replace with your Privacy Policy Url. -->
+	<string name="privacy_policy_url">
+        http://dream-space.web.id/
+    </string>
+
+	<!--Edit with your admob app id-->
+	<string name="admob_app_id">ca-app-pub-3239677920600357~5416958163</string>
+
+	<!-- Replace with your own banner ad unit id. -->
+	<string name="banner_ad_unit_id">ca-app-pub-3239677920600357/2323890961</string>
+
+	<!--Replace with your own interstitial ad unit id. -->
+    <string name="interstitial_ad_unit_id">ca-app-pub-3239677920600357/3800624160</string>
+   	
+   	<string-array name="string_unit">
+   	    <item >Celsius ( °C )</item>
+   	    <item >Fahrenheit ( °F )</item>
+   	</string-array>
+    
+    
+	<string name="monday">MON</string>
+	<string name="tuesday">TUE</string>
+	<string name="wednesday">WED</string>
+	<string name="thursday">THU</string>
+	<string name="friday">FRI</string>
+	<string name="saturday">SAT</string>
+	<string name="sunday">SUN</string>
+	
+	<!-- Jakarta -->
+	<string name="default_city_code">1642911</string>
+	
+</resources>
