@@ -43,7 +43,7 @@
         <item >#673AB7</item>	<!-- broken clouds color -->
         <item >#2196F3</item>	<!-- shower rain color -->
         
-        <item >#03A9F4</item> 	<!-- rain color -->
+        <item >@drawable/rain</item> 	<!-- rain color -->
         <item >#F44336</item>	<!-- thunderstorm color -->
         <item >#00BCD4</item>	<!-- snow color -->
         <item >#607D8B</item>	<!-- mist color -->
