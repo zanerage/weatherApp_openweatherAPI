@@ -10,14 +10,13 @@
 	<string name="data_source">\nData from :\nwww.openweathermap.org</string>
 
 	<!-- Replace with your more apps URL -->
-	<string name="more_app_url">http://portfolio.dream-space.web.id/</string>
+	<string name="more_app_url">http://mario-antolovic.com/</string>
 
-	<!-- Replace with your Admob Publisher Id. -->
-	<string name="publisher_id">pub-XXXXXXXXXXXXXXX</string>
+
 
 	<!-- Replace with your Privacy Policy Url. -->
 	<string name="privacy_policy_url">
-        http://dream-space.web.id/
+        http://mario-antolovic.com/
     </string>
 
 	<!--Edit with your admob app id-->

@@ -8,7 +8,7 @@ import com.simple.weather.R;
 public class Constant {
 
     /**
-     * change with your APPID.
+     * get your own api/id on the website if you want to use  / i think they are charging now its no longer free to use
      * register here  http://openweathermap.org/
      */
     public static final String APPID = "2b350a87de1accceaaa66f9966efb1fe";

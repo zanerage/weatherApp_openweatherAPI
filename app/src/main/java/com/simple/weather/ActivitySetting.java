@@ -94,7 +94,7 @@ public class ActivitySetting extends AppCompatActivity {
                 try {
                     startActivity(goToMarket);
                 } catch (ActivityNotFoundException e) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/zanerage/weatherApp_openweatherAPI" + getPackageName())));
                 }
             }
         });
