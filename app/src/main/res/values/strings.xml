@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Simple Weather</string>
+    <string name="app_name">Cloud Weather</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_activity_forecast">Forecast</string>
-	<string name="about_text">Weather application that shows the weather information from multiple city,
-	    With different color for weather condition.</string>
+	<string name="about_text">Cloud Weather app is app that shows the weather information from multiple city,
+	    With different color and background changes for weather condition.Enjoy!</string>
 	    
 	<string name="data_source">\nData from :\nwww.openweathermap.org</string>
 

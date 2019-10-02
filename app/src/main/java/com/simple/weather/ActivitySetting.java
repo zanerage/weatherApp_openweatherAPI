@@ -25,7 +25,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.simple.weather.data.AppConfig;
 import com.simple.weather.data.Constant;
-import com.simple.weather.data.GDPR;
+
 import com.simple.weather.data.GlobalVariable;
 import com.simple.weather.data.Utils;
 
@@ -54,7 +54,8 @@ public class ActivitySetting extends AppCompatActivity {
         tv_unit.setText(string_unit[global.getIntPref(Constant.I_KEY_UNIT, 0)]);
         actionMenu();
         initToolbar();
-        initBannerAds();
+
+
     }
 
     private void initToolbar() {
@@ -89,12 +90,12 @@ public class ActivitySetting extends AppCompatActivity {
         lyt_rate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("market://details?id=" + getPackageName());
+                Uri uri = Uri.parse("https://github.com/zanerage/weatherApp_openweatherAPI");
                 Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
                 try {
                     startActivity(goToMarket);
                 } catch (ActivityNotFoundException e) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/zanerage/weatherApp_openweatherAPI" + getPackageName())));
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/zanerage/weatherApp_openweatherAPI")));
                 }
             }
         });
@@ -160,19 +161,7 @@ public class ActivitySetting extends AppCompatActivity {
         unitDialog.show();
     }
 
-    private void initBannerAds() {
-        if (!AppConfig.ENABLE_SETTING_BANNER) return;
-        final AdView mAdView = (AdView) findViewById(R.id.ad_view);
-        AdRequest adRequest = new AdRequest.Builder().addNetworkExtrasBundle(AdMobAdapter.class, GDPR.getBundleAd(this)).build();
-        mAdView.loadAd(adRequest);
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                mAdView.setVisibility(View.VISIBLE);
-                super.onAdLoaded();
-            }
-        });
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

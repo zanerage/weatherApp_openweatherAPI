@@ -5,7 +5,7 @@ android {
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
-        applicationId "app.simple.weather"
+        applicationId "com.mario_antolovic.cloud_app"
         minSdkVersion 14
         targetSdkVersion 27
         versionCode 520

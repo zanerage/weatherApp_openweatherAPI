@@ -35,7 +35,7 @@ import com.simple.weather.data.AppConfig;
 import com.simple.weather.data.ConnectionDetector;
 import com.simple.weather.data.Constant;
 import com.simple.weather.data.DatabaseManager;
-import com.simple.weather.data.GDPR;
+
 import com.simple.weather.data.GlobalVariable;
 import com.simple.weather.data.Utils;
 import com.simple.weather.json.JSONLoader;
@@ -92,7 +92,7 @@ public class ActivityMain extends SlidingActivity {
 
         Utils.setUpdateWidget(getApplicationContext());
 
-        GDPR.updateConsentStatus(this);
+
 
         global = (GlobalVariable) getApplication();
         //gps		= new GPSTracker(ActivityMain.this);
@@ -101,8 +101,7 @@ public class ActivityMain extends SlidingActivity {
         initComponen();
         buttonAction();
 
-        initBannerAds();
-        initInterstitialAds();
+
 
     }
 
@@ -361,42 +360,8 @@ public class ActivityMain extends SlidingActivity {
         listview_location.setAdapter(new ItemLocationAdapter(ActivityMain.this, itemsloc));
     }
 
-    private void initBannerAds() {
-        if (!AppConfig.ENABLE_MAIN_BANNER) return;
-        final AdView mAdView = (AdView) findViewById(R.id.ad_view);
-        AdRequest adRequest = new AdRequest.Builder().addNetworkExtrasBundle(AdMobAdapter.class, GDPR.getBundleAd(this)).build();
-        mAdView.loadAd(adRequest);
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                mAdView.setVisibility(View.VISIBLE);
-                super.onAdLoaded();
-            }
-        });
-    }
 
-    private void initInterstitialAds() {
-        if (!AppConfig.ENABLE_MAIN_INTERSTITIAL) return;
-        // Create the InterstitialAd and set the adUnitId.
-        mInterstitialAd = new InterstitialAd(this);
-        // Defined in res/values/strings.xml
-        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
-        //prepare ads
-        AdRequest adRequest2 = new AdRequest.Builder().addNetworkExtrasBundle(AdMobAdapter.class, GDPR.getBundleAd(this)).build();
-        mInterstitialAd.loadAd(adRequest2);
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        initInterstitialAds();
-                    }
-                }, 1000 * AppConfig.DELAY_NEXT_INTERSTITIAL);
-            }
-        });
-    }
+
 
     /**
      * show ads
